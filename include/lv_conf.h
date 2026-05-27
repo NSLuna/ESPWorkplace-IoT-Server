@@ -40,7 +40,7 @@
  * - LV_STDLIB_RTTHREAD:    RT-Thread implementation
  * - LV_STDLIB_CUSTOM:      Implement the functions externally
  */
-#define LV_USE_STDLIB_MALLOC    LV_STDLIB_BUILTIN
+#define LV_USE_STDLIB_MALLOC    LV_STDLIB_CLIB
 
 /** Possible values
  * - LV_STDLIB_BUILTIN:     LVGL's built in implementation
@@ -67,10 +67,14 @@
 #define LV_LIMITS_INCLUDE       <limits.h>
 #define LV_STDARG_INCLUDE       <stdarg.h>
 
-#if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN
+#if LV_USE_STDLIB_MALLOC == LV_STDLIB_CLIB
     /** Size of memory available for `lv_malloc()` in bytes (>= 2kB) */
-    #define LV_MEM_SIZE (64 * 1024U)          /**< [bytes] */
-
+    #define LV_MEM_SIZE (512 * 1024U)          /**< [bytes] */
+    #define LV_MEM_CUSTOM 1
+    #define LV_MEM_CUSTOM_INCLUDE <stdlib.h>
+    #define LV_MEM_CUSTOM_ALLOC   heap_caps_malloc(size, MALLOC_CAP_SPIRAM)
+    #define LV_MEM_CUSTOM_FREE    free
+    #define LV_MEM_CUSTOM_REALLOC heap_caps_realloc(p, size, MALLOC_CAP_SPIRAM)
     /** Size of the memory expand for `lv_malloc()` in bytes */
     #define LV_MEM_POOL_EXPAND_SIZE 0
 
