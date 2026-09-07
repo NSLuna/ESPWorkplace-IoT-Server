@@ -1,0 +1,25 @@
+#pragma once
+#include <lvgl.h>
+
+// ── 색상 정의 (Premium Vivid — Cyan→Blue→Violet) ──────────
+#define C_BG            lv_color_hex(0x0A0D1C)
+#define C_CARD          lv_color_hex(0x1A203C)
+#define C_CARD_BORDER   lv_color_hex(0x1E2848)
+#define C_LOG_BG        lv_color_hex(0x0D0F22)
+#define C_TEXT          lv_color_hex(0xF2F5FC)
+#define C_TEXT_DIM      lv_color_hex(0x8089A0)
+#define C_TEXT_DARK     lv_color_hex(0x4A5270)
+#define C_CYAN          lv_color_hex(0x2FE0E6)
+#define C_BLUE_MID      lv_color_hex(0x4F8DFF)
+#define C_VIOLET        lv_color_hex(0x7B6BE8)
+#define C_VIOLET_DEEP   lv_color_hex(0xA06BFF)
+#define C_MAGENTA       lv_color_hex(0xFF6BAE)
+#define C_CYAN_CARD     lv_color_hex(0x0A1A2E)
+#define C_GREEN         lv_color_hex(0x2FE0A0)
+#define C_RED           lv_color_hex(0xFF5A5A)
+#define C_YELLOW        lv_color_hex(0xFFAA00)
+#define C_BTN_OFF_BG    lv_color_hex(0x161C38)
+#define C_BTN_OFF_BD    lv_color_hex(0x1E2848)
+#define C_BTN_ON_BG     lv_color_hex(0x2A2080)
+#define C_BTN_ON_BD     lv_color_hex(0x7B6BE8)
+#define C_LOG_TX        lv_color_hex(0x2FE0E6)
