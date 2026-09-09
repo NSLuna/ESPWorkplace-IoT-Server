@@ -40,7 +40,7 @@ void fetchWeather() {
     char url[200];
     snprintf(url, sizeof(url),
         "http://api.open-meteo.com/v1/forecast?latitude=%s&longitude=%s"
-        "&current=temperature_2m,weather_code&timezone=auto",
+        "&current=temperature_2m,weather_code&timezone=Asia/Seoul",
         WEATHER_LAT, WEATHER_LON);
     http.setTimeout(5000);
     http.useHTTP10(true);
